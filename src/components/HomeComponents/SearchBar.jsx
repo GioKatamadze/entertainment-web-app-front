@@ -11,7 +11,7 @@ const StyledSearchBar = styled.form`
     .icon {
         width: 32px;
         height: 32px;
-        margin-left: 20px;
+        margin-left: 10px;
         transform: scale(0.7);
     }
     input {
