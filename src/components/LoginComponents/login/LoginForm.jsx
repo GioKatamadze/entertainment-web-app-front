@@ -1,22 +1,31 @@
-import { StyledPage, StyledForm, Paragraph } from "./style.jsx"
+import { StyledForm, Paragraph } from "./style.jsx"
 import Logo from "svg/Logo.jsx";
-import TextInput from "components/LoginComponents/textinput/TextInput.jsx"
 import Button from "components/LoginComponents/login-button/LoginButton.jsx"
+import { HashLink } from 'react-router-hash-link';
 
 const LoginForm = () => {
     return (
-        <StyledPage>
+        <StyledForm>
             <Logo />
-            <StyledForm>
+
+            <form>
                 <h1>Login</h1>
-                <TextInput/>
-                <TextInput/>
-                <Button>Login to your account</Button>
-                <Paragraph>
-                    Don't have an account? Sign Up
-                </Paragraph>
-            </StyledForm>
-        </StyledPage>
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    required/>
+                <input
+                    type="password"
+                    placeholder="Password"
+                    required/>
+                    <Button type="submit" >Login to your account</Button>
+                    <Paragraph>
+                        Don't have an account? 
+                        <HashLink className="nostyle" smooth to="/signup">Sign Up</HashLink>
+                    </Paragraph>
+            </form>
+
+        </StyledForm>
     )
 }
 
