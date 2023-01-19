@@ -8,9 +8,9 @@ function App() {
     <div style={{ width: "100vw", height: "100vh" }}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
+        {/* <Route path="/movies" element={<Movies />} />
         <Route path="/tvseries" element={<TVseries />} />
-        <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="/bookmarks" element={<Bookmarks />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<div>Error</div>} />

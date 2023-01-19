@@ -26,6 +26,7 @@ export const StyledHeader = styled.div`
     align-items: center;
     .logo {
         margin-left: 16px;
+        transform: scale(0.8);
     }
     .menu {
         width: max-content;
@@ -35,14 +36,14 @@ export const StyledHeader = styled.div`
         justify-content: space-between;
     }
     .user {
-        width: 28px;
-        height: 28px;
+        width: 25px;
+        height: 25px;
         margin-right: 16px;
         img {
             outline: 2px solid white;
             border-radius: 100%;
-            width: 27px;
-            height: 27px;
+            width: 25px;
+            height: 25px;
         }
     }
 
@@ -52,6 +53,7 @@ export const StyledHeader = styled.div`
         height: 75px;
         .logo {
         margin-left: 24px;
+        transform: scale(1);
         }
         .menu {
         gap: 32px;
@@ -83,6 +85,7 @@ export const StyledHeader = styled.div`
         .menu {
             flex-direction: column;
             gap: 40px;
+            transform: scale(1.2) translateY(-100px);
         }
         .user {
             width: 40px;

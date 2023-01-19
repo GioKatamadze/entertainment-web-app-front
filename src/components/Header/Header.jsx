@@ -1,10 +1,10 @@
 import { StyledHeaderWrapper, StyledHeader } from "./HeaderStyles"
 
-import Logo from "../../../svg/Logo.jsx"
-import NavHome from "../../../svg/NavHome.jsx"
-import NavMovies from "../../../svg/NavMovies.jsx"
-import NavTVseries from "../../../svg/NavTVseries.jsx"
-import NavBookmark from "../../../svg/NavBookmark.jsx"
+import Logo from "../../svg/Logo.jsx"
+import NavHome from "../../svg/NavHome.jsx"
+import NavMovies from "../../svg/NavMovies.jsx"
+import NavTVseries from "../../svg/NavTVseries.jsx"
+import NavBookmark from "../../svg/NavBookmark.jsx"
 import User from "./user.png";
 
 
