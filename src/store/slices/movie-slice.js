@@ -8,7 +8,7 @@ const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    fetchMovies: (state, action) => {
+    fetchMovie: (state, action) => {
       state.items = action.payload;
     },
   },
