@@ -55,9 +55,9 @@ const StyledSearchBar = styled.form`
     }
 
     @media (min-width: 1440px) {
-        margin-top: 32px;
+        margin-top: 60px;
         width: 90%;
-        height: 100px;
+        height: auto;
         .icon {
             margin-left: 0;
             transform: scale(1);

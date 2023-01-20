@@ -13,14 +13,14 @@ export const TrendingBox = styled.div`
     }
     @media (min-width: 768px) {
         h2 {
-            margin: 20px auto 25px 40px;
+            margin: 20px auto 25px 25px;
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.5px;
         }
     }
     @media (min-width: 1440px) {
-        width: 90%
+        width: 100%;
         h2 {
             margin: 20px auto 25px auto;
         }
@@ -29,8 +29,40 @@ export const TrendingBox = styled.div`
 export const StyledCarouselWrapper = styled.div`
     width: 100vw;
     height: max-content;
-    overflow-y: scroll;
-    scroll
+    overflow-x: scroll;
+    overflow-y: hidden;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    ::-webkit-scrollbar-track {
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+        @media (min-width: 1440px) {
+            width: 100%;
+            ::-webkit-scrollbar {
+                width: 5px; 
+                height: 12px;
+                display: block;
+                }
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 1px #9c9a9aaa;
+                border-radius: 5px;
+                display: block;
+                }
+
+            ::-webkit-scrollbar-thumb {
+                background: #9c9a9a36;
+                border-radius: 10px;
+                display: block;
+                }
+            }
+
+
+        
 `
 export const StyledCarousel = styled.div`
     width: max-content;
@@ -39,21 +71,28 @@ export const StyledCarousel = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: nowrap;
+    margin-left: 16px;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+        margin-left: 25px;
+        gap: 40px;
+    }
 
     @media (min-width: 1440px) {
-        transform: translateX(-40px);
+        margin-left: 0;
     }
 `
 export const CarouselItem = styled.div`
     width: 240px;
     height: 140px;
     position: relative;
-    margin-left: 16px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
+    margin-bottom: 5px;
     * {
         z-index: 200;
         position: relative;
@@ -155,7 +194,7 @@ export const CarouselItem = styled.div`
     }
 
     @media (min-width: 1440px) {
-        margin-left: 40px;
+        margin-bottom: 10px;
         h2 {
             margin: 0 auto 24px 24px;
             font-size: 24px;
