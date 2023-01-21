@@ -1,7 +1,114 @@
 import styled from "styled-components";
 
-export const TrendingBox = styled.div`
+export const StyledHomePage = styled.div`
     width: 100vw;
+    height: 100%;
+    background-color: #10141E;
+    @media (min-width: 1440px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+`
+export const Dashboard = styled.div`
+    width: 90%;
+    height: 100%;
+    background-color: #10141E;
+    @media (min-width: 1440px) {
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+`
+/////////////////////////
+
+export const StyledSearchBar = styled.form`
+    input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+    input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { display: none; }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 55px;
+    .icon {
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+        transform: scale(0.7);
+    }
+    input {
+        flex-grow: 1;
+        width: auto;
+        height: 100%;
+        border: none;
+        outline: none;
+        background-color: #10141E;
+        color: white;
+        font-family: Outfit;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        ::placeholder{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: #ffffff7d;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .icon {
+            margin-left: 25px;
+            transform: scale(1);
+        }
+        input {
+            margin-left: 15px;
+            font-size: 24px;
+            line-height: 30px;
+            ::placeholder{
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+        margin-top: 60px;
+        width: 90%;
+        height: auto;
+        .icon {
+            margin-left: 0;
+            transform: scale(1);
+        }
+        input {
+            margin-left: 15px;
+            font-size: 24px;
+            line-height: 30px;
+            ::placeholder{
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+`
+
+/////////////////////////
+
+export const RecommendedBox = styled.div`
+    width: 100vw;
+    height: 100%;
     background-color: #10141E;
     h2 {
         margin: 30px auto 16px 16px;
@@ -21,13 +128,13 @@ export const TrendingBox = styled.div`
         }
     }
     @media (min-width: 1440px) {
-        width: 100%;
+        height: 100%;
         h2 {
             margin: 20px auto 25px auto;
         }
     }
 `
-export const StyledCarouselWrapper = styled.div`
+export const MoviesWrapper = styled.div`
     width: 100%;
     height: max-content;
     overflow-x: scroll;
@@ -65,7 +172,7 @@ export const StyledCarouselWrapper = styled.div`
 
         
 `
-export const StyledCarousel = styled.div`
+export const StyledMovies = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
@@ -84,7 +191,7 @@ export const StyledCarousel = styled.div`
         gap: 2%;
     }
 `
-export const CarouselItem = styled.div`
+export const MovieItem = styled.div`
     width: 45%;
     margin-left: 3%;
     height: auto;

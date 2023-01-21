@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import { fetchMovie } from "store/actions/movieActions.js";
 
-import { TrendingBox, StyledCarouselWrapper, StyledCarousel, CarouselItem } from './TrendingStyles';
+import { TrendingBox, StyledCarouselWrapper, StyledCarousel, CarouselItem } from "./TrendingStyles.jsx";
 import NavMovies from "svg/NavMovies";
 import BookmarkEmpty from "svg/BookmarkEmpty";
 

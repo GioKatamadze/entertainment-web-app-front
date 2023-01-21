@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMovie } from "store/actions/movieActions.js";
-import { Trending } from 'components/Trending/Trending.jsx';
 import Header from "components/Header/Header.jsx"
 import NavMovies from "svg/NavMovies";
 import BookmarkEmpty from "svg/BookmarkEmpty";
@@ -17,18 +16,21 @@ import {
 } from "./Styles"
 
 
-const Home = () => {
+const TVseries = () => {
     const dispatch = useDispatch();
     const movies = useSelector((state) => state.movies.items);
+    const categoryTVseries = movies.filter(movie => {
+        return movie.category === 'TV Series';
+      });
     const [searchResult, setSearchResult] = useState(movies);
     const [searching, setSearching] = useState(false);
     
   const handleChange = async (event) => {
     if (event.target.value === "") {
         setSearching(false)
-      setSearchResult(movies);
+      setSearchResult(categoryTVseries);
     } else {
-      const result = await movies.filter((item) =>
+      const result = await categoryTVseries.filter((item) =>
         item.title.toLowerCase().includes(event.target.value.toLowerCase())
       );
       setSearchResult(result);
@@ -36,7 +38,7 @@ const Home = () => {
     }
   };
 
-    const AllMovies = movies.map((movie) => {
+    const AllMovies = categoryTVseries.map((movie) => {
         return (
             <MovieItem 
             key={movie.title}
@@ -106,12 +108,11 @@ const Home = () => {
                 <input
                     onChange={handleChange}
                     type="search"
-                    placeholder="Search for movies or TV series"
+                    placeholder="Search for TV series"
                 />
             </StyledSearchBar>
-            <Trending />
             <RecommendedBox>
-                <h2>Recommended for you</h2>
+                <h2>TV Series</h2>
                 <MoviesWrapper>
                     {searching ? (
                         <StyledMovies>
@@ -129,4 +130,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default TVseries
