@@ -5,7 +5,7 @@ import SignUp from "pages/signup/SignUp.jsx";
 
 function App() {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100vw", height: "100%" }}>
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/movies" element={<Movies />} />

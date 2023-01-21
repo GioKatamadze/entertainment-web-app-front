@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHomePage = styled.div`
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
     background-color: #10141E;
     @media (min-width: 1440px) {
         display: flex;
@@ -14,7 +14,7 @@ export const StyledHomePage = styled.div`
 
 export const Dashboard = styled.div`
     width: 90%;
-    height: 100vh;
+    height: 100%;
     background-color: #10141E;
     @media (min-width: 1440px) {
         height: auto;

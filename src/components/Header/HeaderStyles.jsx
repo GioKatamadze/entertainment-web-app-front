@@ -10,11 +10,16 @@ export const StyledHeaderWrapper = styled.div`
         padding: 25px;
     }
     @media (min-width: 1440px) {
-        width: 10vw;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 10%;
         height: 100vh;
         padding: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 `
 export const StyledHeader = styled.div`
@@ -70,14 +75,12 @@ export const StyledHeader = styled.div`
     }
 
     @media (min-width: 1440px) {
-        width: auto;
-        height: 100vh;
-        margin: 32px;
+        width: 70%;
+        height: 92%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-
         .logo {
         margin-left: 0;
         margin-top: 32px;
