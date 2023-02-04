@@ -114,7 +114,7 @@ export const StyledSearchBar = styled.form`
 /////////////////////////
 
 export const RecommendedBox = styled.div`
-    width: 98%;
+    width: 100%;
     height: 100%;
     background-color: #10141E;
     h2 {
@@ -191,6 +191,7 @@ export const MovieItem = styled.div`
         z-index: 300;
         position: absolute;
         background-color: #00000085;
+        border-radius: 8px;
         p {
             display: flex;
             justify-content: center;

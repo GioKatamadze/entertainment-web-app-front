@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const StyledHeaderWrapper = styled.div`
     background-color: #10141E;
-    width: 98%;
+    width: 100%;
     height: 55px;
     @media (min-width: 768px) {
         width: 92%;
@@ -52,7 +52,7 @@ export const StyledHeader = styled.div`
         height: 25px;
         margin-right: 16px;
         img {
-            outline: 2px solid white;
+            border: 2px solid white;
             border-radius: 100%;
             width: 25px;
             height: 25px;
