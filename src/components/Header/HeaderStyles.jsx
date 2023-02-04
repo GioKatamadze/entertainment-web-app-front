@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 export const StyledHeaderWrapper = styled.div`
     background-color: #10141E;
-    width: 100%;
+    width: 98%;
     height: 55px;
     @media (min-width: 768px) {
-        width: auto;
+        width: 92%;
         height: 75px;
         padding: 25px;
     }
@@ -29,16 +29,23 @@ export const StyledHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
     .logo {
         margin-left: 16px;
         transform: scale(0.8);
     }
-    .menu {
+    .logo:hover {
+            cursor: pointer;
+        }
+    nav {
         width: max-content;
         display: flex;
         align-items: center;
         gap: 24px;
         justify-content: space-between;
+        .navItem:hover, .navItem:active {
+            filter: invert(42%) sepia(93%) saturate(0%) hue-rotate(87deg) brightness(119%) contrast(1119%);
+        }
     }
     .user {
         width: 25px;
@@ -60,7 +67,7 @@ export const StyledHeader = styled.div`
         margin-left: 24px;
         transform: scale(1);
         }
-        .menu {
+        nav {
         gap: 32px;
         }
         .user {
@@ -85,7 +92,7 @@ export const StyledHeader = styled.div`
         margin-left: 0;
         margin-top: 32px;
         }
-        .menu {
+        nav {
             flex-direction: column;
             gap: 40px;
             transform: scale(1.2) translateY(-100px);

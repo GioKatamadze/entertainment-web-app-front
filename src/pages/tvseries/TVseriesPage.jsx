@@ -48,6 +48,9 @@ const TVseries = () => {
                         <BookmarkEmpty />
                     </div>
                 </div>
+                <div className="hoverWrapper" >
+                    <p>Play</p>
+                </div>
                 <img src={process.env.REACT_APP_API_URL + "/regular/" + movie.thumbnail + ".jpg"} />
                 <div className="about" >
                     <div className="details" >
@@ -75,6 +78,9 @@ const TVseries = () => {
                     <div className="bookmarkIcon" >
                         <BookmarkEmpty />
                     </div>
+                </div>
+                <div className="hoverWrapper" >
+                    <p>Play</p>
                 </div>
                 <img src={process.env.REACT_APP_API_URL + "/regular/" + movie.thumbnail + ".jpg"} />
                 <div className="about" >

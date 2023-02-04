@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMovie } from "store/actions/movieActions.js";
+
 import { Trending } from 'components/Trending/Trending.jsx';
 import Header from "components/Header/Header.jsx"
 import NavMovies from "svg/NavMovies";
 import BookmarkEmpty from "svg/BookmarkEmpty";
 import SearchIcon from "svg/SearchIcon.jsx"
+
 import { 
     StyledHomePage,
     Dashboard, 
@@ -22,7 +24,7 @@ const Home = () => {
     const movies = useSelector((state) => state.movies.items);
     const [searchResult, setSearchResult] = useState(movies);
     const [searching, setSearching] = useState(false);
-    
+
   const handleChange = async (event) => {
     if (event.target.value === "") {
         setSearching(false)
@@ -45,6 +47,9 @@ const Home = () => {
                     <div className="bookmarkIcon" >
                         <BookmarkEmpty />
                     </div>
+                </div>
+                <div className="hoverWrapper" >
+                    <p>Play</p>
                 </div>
                 <img src={process.env.REACT_APP_API_URL + "/regular/" + movie.thumbnail + ".jpg"} />
                 <div className="about" >
@@ -74,6 +79,9 @@ const Home = () => {
                         <BookmarkEmpty />
                     </div>
                 </div>
+                <div className="hoverWrapper" >
+                    <p>Play</p>
+                </div>
                 <img src={process.env.REACT_APP_API_URL + "/regular/" + movie.thumbnail + ".jpg"} />
                 <div className="about" >
                     <div className="details" >
@@ -95,6 +103,8 @@ const Home = () => {
     useEffect(() => {
         dispatch(fetchMovie())
     }, [dispatch]);
+
+
     return (
         <StyledHomePage>
             <Header />

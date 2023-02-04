@@ -4,7 +4,7 @@ export const TrendingBox = styled.div`
     width: 100vw;
     h2 {
         margin: 10px auto 16px 16px;
-        font-size: 20px;
+        font-size: 4.5vw;
         font-weight: 300;
         line-height: 25px;
         letter-spacing: -0.3125px;
@@ -14,7 +14,7 @@ export const TrendingBox = styled.div`
     @media (min-width: 768px) {
         h2 {
             margin: 20px auto 25px 25px;
-            font-size: 32px;
+            font-size: 3.5vw;
             line-height: 40px;
             letter-spacing: -0.5px;
         }
@@ -27,23 +27,11 @@ export const TrendingBox = styled.div`
     }
 `
 export const StyledCarouselWrapper = styled.div`
-    width: 100vw;
+    width: 100%;
     height: max-content;
     overflow-x: scroll;
     overflow-y: hidden;
     ::-webkit-scrollbar {
-        display: none;
-    }
-    ::-webkit-scrollbar-track {
-        display: none;
-    }
-    ::-webkit-scrollbar-thumb {
-        display: none;
-    }
-
-        @media (min-width: 1440px) {
-            width: 100%;
-            ::-webkit-scrollbar {
                 width: 5px; 
                 height: 12px;
                 display: block;
@@ -59,10 +47,7 @@ export const StyledCarouselWrapper = styled.div`
                 border-radius: 10px;
                 display: block;
                 }
-            }
-
-
-        
+   
 `
 export const StyledCarousel = styled.div`
     width: max-content;
@@ -93,6 +78,34 @@ export const CarouselItem = styled.div`
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 5px;
+    .hoverWrapper {
+        display: none;
+    }
+    :hover {
+        .hoverWrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 300;
+            position: absolute;
+            background-color: #00000085;
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
+                height: 40px;
+                background: #ffffff5d;
+                border-radius: 28.5px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 23px;
+                color: #FFFFFF;
+            }
+        }
+    }
     * {
         z-index: 200;
         position: relative;
@@ -104,6 +117,7 @@ export const CarouselItem = styled.div`
         justify-content: flex-end;
         align-items: flex-start;
         flex-wrap: nowrap;
+        z-index: 400;
     }
     .bookmarkIcon {
         display: flex;
@@ -114,6 +128,10 @@ export const CarouselItem = styled.div`
         height: 32px;
         border-radius: 100%;
         background-color: #00000087;
+        :hover{
+            cursor: pointer;
+            background-color: #ffffff86;
+        }
     }
     h2 {
         margin: 0 auto 16px 16px;

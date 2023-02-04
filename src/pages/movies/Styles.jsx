@@ -12,11 +12,12 @@ export const StyledHomePage = styled.div`
     }
 `
 export const Dashboard = styled.div`
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-color: #10141E;
     @media (min-width: 1440px) {
         height: auto;
+        width: 90%;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -32,6 +33,9 @@ export const StyledSearchBar = styled.form`
     input[type="search"]::-webkit-search-cancel-button,
     input[type="search"]::-webkit-search-results-button,
     input[type="search"]::-webkit-search-results-decoration { display: none; }
+    :hover {
+        cursor: pointer;
+    }
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -65,6 +69,9 @@ export const StyledSearchBar = styled.form`
             letter-spacing: 0px;
             text-align: left;
             color: #ffffff7d;
+        }
+        :hover {
+        cursor: pointer;
         }
     }
 
@@ -107,12 +114,12 @@ export const StyledSearchBar = styled.form`
 /////////////////////////
 
 export const RecommendedBox = styled.div`
-    width: 100vw;
+    width: 98%;
     height: 100%;
     background-color: #10141E;
     h2 {
-        margin: 30px auto 16px 16px;
-        font-size: 20px;
+        margin: 18px auto 16px 16px;
+        font-size: 4.5vw;
         font-weight: 300;
         line-height: 25px;
         letter-spacing: -0.3125px;
@@ -122,13 +129,14 @@ export const RecommendedBox = styled.div`
     @media (min-width: 768px) {
         h2 {
             margin: 20px auto 25px 25px;
-            font-size: 32px;
+            font-size: 3.5vw;
             line-height: 40px;
             letter-spacing: -0.5px;
         }
     }
     @media (min-width: 1440px) {
         height: 100%;
+        width: 100%;
         h2 {
             margin: 20px auto 25px auto;
         }
@@ -137,40 +145,6 @@ export const RecommendedBox = styled.div`
 export const MoviesWrapper = styled.div`
     width: 100%;
     height: max-content;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    ::-webkit-scrollbar-track {
-        display: none;
-    }
-    ::-webkit-scrollbar-thumb {
-        display: none;
-    }
-
-        @media (min-width: 1440px) {
-            width: 100%;
-            ::-webkit-scrollbar {
-                width: 5px; 
-                height: 12px;
-                display: block;
-                }
-            ::-webkit-scrollbar-track {
-                box-shadow: inset 0 0 1px #9c9a9aaa;
-                border-radius: 5px;
-                display: block;
-                }
-
-            ::-webkit-scrollbar-thumb {
-                background: #9c9a9a36;
-                border-radius: 10px;
-                display: block;
-                }
-            }
-
-
-        
 `
 export const StyledMovies = styled.div`
     width: 100%;
@@ -181,12 +155,13 @@ export const StyledMovies = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     @media (min-width: 768px) {
-        width: 100%;
-        margin-left: 25px;
+        width: calc(100% - 2.7%);
+        margin-left: 2.7%;
         gap: 3%;
     }
 
     @media (min-width: 1440px) {
+        width: 100%;
         margin-left: 0;
         gap: 2%;
     }
@@ -202,6 +177,36 @@ export const MovieItem = styled.div`
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 5px;
+    position: relative;
+    .hoverWrapper {
+        display: none;
+    }
+    :hover {
+        .hoverWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 300;
+        position: absolute;
+        background-color: #00000085;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 40px;
+            background: #ffffff5d;
+            border-radius: 28.5px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 23px;
+            color: #FFFFFF;
+            transform: translateY(-25px);
+        }
+    }
+    }
     * {
         z-index: 200;
         position: relative;
@@ -213,6 +218,7 @@ export const MovieItem = styled.div`
         justify-content: flex-end;
         align-items: flex-start;
         flex-wrap: nowrap;
+        z-index: 400;
     }
     .bookmarkIcon { 
         position: absolute;
@@ -226,16 +232,21 @@ export const MovieItem = styled.div`
         height: 32px;
         border-radius: 100%;
         background-color: #00000087;
+        :hover{
+            cursor: pointer;
+            background-color: #ffffff86;
+        }
     }
     h2 {
-        margin: 0 auto 16px 16px;
-        font-size: 15px;
+        margin: 0 auto 2.5vw 2.5vw;
+        line-height: normal;
+        font-size: 3.5vw;
         font-weight: 500;
         line-height: 19px;
         color: white;
     }
     p {
-        font-size: 12px;
+        font-size: 2.2vw;
         font-weight: 300;
         line-height: 15px;
         color: white;
@@ -254,7 +265,8 @@ export const MovieItem = styled.div`
         justify-content: flex-start;
         align-items: center;
         flex-wrap: nowrap;
-        margin-left: 16px;
+        margin-left: 2.5vw;
+        margin-top: 1vw;
     }
     .category {
         height: max-content;
@@ -277,13 +289,12 @@ export const MovieItem = styled.div`
         margin-left: 0;
         flex-direction: column;
         h2 {
-            margin: 0 auto 24px 24px;
-            font-size: 24px;
-            line-height: 30px;
+            margin: 0.5vw auto 24px 24px;
+            font-size: 2.2vw;
             color: white;
         }
         p {
-            font-size: 15px;
+            font-size: 1.3vw;
             line-height: 19px;
         }
         .details {
@@ -291,6 +302,9 @@ export const MovieItem = styled.div`
         }
         .bookmarkIcon {
             margin: 16px 24px auto auto;
+        }
+        .hoverWrapper p {
+            transform: translateY(-35px);
         }
     }
 

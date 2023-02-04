@@ -22,6 +22,9 @@ export const Trending = (props) => {
                         <BookmarkEmpty />
                     </div>
                 </div>
+                <div className="hoverWrapper" >
+                    <p>Play</p>
+                </div>
                 <div className="about" >
                     <div className="details" >
                         <p>{movie.year}</p>

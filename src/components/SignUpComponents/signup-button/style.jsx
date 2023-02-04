@@ -18,6 +18,7 @@ export const Input = styled.button`
   &:not(:disabled):hover {
     color: #fc4747;
     background: #ffffff;
+    cursor: pointer;
   }
   &:disabled {
     opacity: 0.6;

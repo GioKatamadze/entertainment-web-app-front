@@ -4,7 +4,7 @@ const initialState = {
   items: [],
 };
 
-const movieSlice = createSlice({
+export const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {

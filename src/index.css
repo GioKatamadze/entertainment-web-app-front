@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap");
-/* 
-* {
-  outline: 1px solid red;
+
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.436);
 } */
 
 body {
   margin: 0;
   height: 100%;
+  width: 100vw;
   font-family: "Outfit", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #10141E;
+  overflow-x: hidden;
 }
+
+h2, h1, h3, p:hover {
+    cursor: pointer;
+}
+
+
 
 code {
   font-family: "Outfit", sans-serif;
